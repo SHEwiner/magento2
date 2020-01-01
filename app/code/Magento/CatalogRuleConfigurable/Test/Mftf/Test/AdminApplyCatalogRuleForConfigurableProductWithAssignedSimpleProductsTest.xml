@@ -17,6 +17,9 @@
             <testCaseId value="MC-14063"/>
             <group value="catalogRuleConfigurable"/>
             <group value="mtf_migrated"/>
+            <skip>
+                <issueId value="MC-17140"/>
+            </skip>
         </annotations>
         <before>
             <!-- Create category for first configurable product -->
@@ -175,7 +178,7 @@
             <actionGroup ref="logout" stepKey="logout"/>
         </after>
         <!-- Create price rule -->
-        <actionGroup ref="newCatalogPriceRuleByUI" stepKey="createPriceRule">
+        <actionGroup ref="NewCatalogPriceRuleByUIActionGroup" stepKey="createPriceRule">
             <argument name="catalogRule" value="CatalogRuleToFixed"/>
         </actionGroup>
         <actionGroup ref="CatalogSelectCustomerGroupActionGroup" stepKey="addCustomerGroup">
